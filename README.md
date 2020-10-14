@@ -126,3 +126,31 @@ Name|name|String
 Password|password|Binary
 Recipes|recipes|array
 Favourites|favourites|array
+
+## Features: 🎡
+
+### Features that have been developed:
+
+### Features that will be developed in the future:
+
+
+## Technologies Used: 👨‍💻
+#### Languages:
+* <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>
+* <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>
+* <a href="https://www.w3schools.com/js/">JavaScript</a>
+* <a href="https://www.json.org/json-en.html">JSON</a>
+* <a href="https://www.python.org/">Python</a>
+
+#### Tools & Libraries: 
+
+* <a href="https://jquery.com/">jQuery</a>
+* <a href="https://git-scm.com/">Git</a>
+* <a href="https://getbootstrap.com/">Bootstrap</a>
+* <a href="https://fontawesome.com/icons?d=gallery">Font-Awesome</a>
+* <a href="https://tinypng.com/">TinyPng (image compression)</a>
+* <a href="https://www.mongodb.com/cloud/atlas">MongoDB Atlas</a>
+* <a href="https://pymongo.readthedocs.io/en/stable/">PyMongo</a>
+* <a href="https://flask.palletsprojects.com/en/1.0.x/">Flask</a>
+* <a href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja</a>
+
