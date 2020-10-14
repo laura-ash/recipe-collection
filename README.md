@@ -154,3 +154,9 @@ Favourites|favourites|array
 * <a href="https://flask.palletsprojects.com/en/1.0.x/">Flask</a>
 * <a href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja</a>
 
+## Planning:  + Testing: ✏️ 🔌
+
+#### Planning: 
+There was a significant amount of time that went into planning this project, especially as I hadn't used the a lot of the technologies before. 
+
+#### Testing: 
