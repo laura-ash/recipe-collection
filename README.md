@@ -1,0 +1,32 @@
+Welcome to my project! Cooking is something I have always enjoyed, but I always found it hard to keep track of my recipes. This projects aims to serve as a database that users can
+upload all of their favourite recipes.
+
+- UX 👍
+    - Project Goals
+    - Target Audience Goals
+    - Site Owner Goals
+    - User Stories
+    - User Requirements and Expectations
+- Design Choices 🎨
+    - Fonts
+    - Icons
+    - Colours
+    - Styling
+    - Images
+    - Backgrounds
+- Planning✏️
+- Wireframes 🔧
+    - Website Layout
+    - Account Creation Flowchart
+    - Database Design
+- Features 🎡
+    - Features that have been developed
+    - Features that will be implemented in the future
+- Technologies Used 👨‍💻
+- Planning + Testing: ✏️ 🔌
+- Bugs 🐞
+- Deployment 🚀
+	- Deploying to Heroku
+    - Locally run this project
+- Credits 💳
+- Disclaimer
