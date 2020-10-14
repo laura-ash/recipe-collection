@@ -11,9 +11,7 @@ upload all of their favourite recipes.
     - Fonts
     - Icons
     - Colours
-    - Styling
     - Images
-    - Backgrounds
 - Planning✏️
 - Wireframes 🔧
     - Website Layout
@@ -93,3 +91,38 @@ bright and enjoyable look, but were a bit bolder than the average pastel to ensu
 The images on the website were chosen specifically to encourage people to get cooking. These show images of different delicious recipes, and people enjoying their time in the kitchen. 
 Users are also encouraged to upload pictures of the recipes that they have tried. 
 
+## Wireframes/Flowcharts: 🔧
+The wireframes have been built to show on different sized devices.
+ 
+### Database Design:
+The project was built around NoSQL features provided by MongoDB. I used these to prepare the following collections.
+
+### Data Storage Types:
+The types of data that are stored in the MongoDB database.
+- ObjectID
+- String
+- Boolean
+- Object
+- Array
+- Binary
+
+Recipe  Collection:
+**Title**|**Key in Collection**|**Data Type**
+:-----:|:-----:|:-----:
+
+Category|category_name|String
+Recipe Name|name|String
+Recipe Author|author|String
+Health Rating|health_rating|String
+Serves|serves|Integer
+create_date|2 October, 2020|String
+
+
+Users Collection:
+**Title**|**Key in Collection**|**Data Type**
+:-----:|:-----:|:-----:
+User ID|_id|ObjectID
+Name|name|String
+Password|password|Binary
+Recipes|recipes|array
+Favourites|favourites|array
