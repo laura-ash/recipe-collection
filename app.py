@@ -12,16 +12,20 @@ app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.secret_key = os.environ.get("SECRET_KEY"
-)
+app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
 @app.route("/")
-@app.route("/get_recipes")
 def get_recipes():
     recipes = mongo.db.recipes.find()
-    return render_template("recipes.html", recipes=recipes)
+    return render_template("pages/recipes.html", recipes=recipes,title="Recipe main page")
+
+
+@app.route("/<bob>")
+def get_bob(bob):
+    recipes = mongo.db.recipes.find()
+    return render_template("pages/recipes.html", recipes=recipes,title="Recipe main page",heaven=bob)
 
 
 if __name__ == "__main__":
