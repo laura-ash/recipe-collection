@@ -2,16 +2,24 @@
 {% block content %}
 
 <div class="d-flex justify-content-center">
-    <form>
+    <form method="POST" action="{{ url_for('get_register') }}">
+        <!-- username -->
         <div class="form-group">
             <i class="far fa-user"></i>
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <label for="username">Username</label>
+            <input type="text" name="username" class="form-control" id="username" aria-describedby="emailHelp">
         </div>
+        <!-- email -->
+        <div class="form-group">
+            <i class="far fa-envelope"></i>
+            <label for="email">Email address</label>
+            <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+        </div>
+        <!-- password -->
         <div class="form-group">
             <i class="fas fa-unlock-alt"></i>
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
