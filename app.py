@@ -29,8 +29,8 @@ def get_bob(bob):
     return render_template("pages/recipes.html", recipes=recipes,title="Recipe main page",heaven=bob)
 
 @app.route("/register", methods=["GET","POST"])
-def register():
-    return render_template("register.html")
+def get_register():
+    return render_template("pages/register.html")
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
