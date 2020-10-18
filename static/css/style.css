@@ -4,3 +4,12 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+.alert {
+    text-align: center;
+}
+
+.alert-info {
+    padding: 5px;
+    font-size: 1rem;
+}

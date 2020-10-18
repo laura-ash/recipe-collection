@@ -5,12 +5,27 @@
 </head>
 <body>
 
-    <header>
-      {% include 'components/navbar.html' %}
-    </header>
+<header>
+    {% include 'components/navbar.html' %}
+</header>
 
+<section>
+    <!--  display flash messages to users -->
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert">
+                  <h3 class="alert-info">{{ message }}</h3>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+</section>
+
+<main class="container">
     {% block content %}
     {% endblock %}
+</main>
 
 </body>
 <script src="{{ url_for('static', filename='js/script.js') }}"></script>
