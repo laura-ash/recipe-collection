@@ -28,9 +28,29 @@ def get_bob(bob):
     recipes = mongo.db.recipes.find()
     return render_template("pages/recipes.html", recipes=recipes,title="Recipe main page",heaven=bob)
 
+
 @app.route("/register", methods=["GET","POST"])
 def get_register():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("Sorry, this username already exists!")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password"))
+        }
+        mongo.db.users.insert_one(register)
+
+        session["user"] = request.form.get("username").lower()
+        flash("Registration successful")
+
+
     return render_template("pages/register.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
