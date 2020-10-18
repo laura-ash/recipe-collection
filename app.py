@@ -47,9 +47,9 @@ def get_register():
 
         session["user"] = request.form.get("username").lower()
         flash("Registration successful")
-
-
     return render_template("pages/register.html")
+
+
 
 
 if __name__ == "__main__":
