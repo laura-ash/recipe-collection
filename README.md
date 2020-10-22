@@ -160,3 +160,7 @@ Favourites|favourites|array
 There was a significant amount of time that went into planning this project, especially as I hadn't used the a lot of the technologies before. 
 
 #### Testing: 
+
+#### Credits: 
+
+Used this tutorial here to get the date picker in the form up and running - https://formden.com/blog/date-picker. 
