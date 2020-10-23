@@ -1,97 +1,85 @@
 {% extends "layout/base.html" %}
 {% block content %}
 
-<h1>Add recipe</h1>
-
-<div class=>
-    <form method="POST" action="">
-        <div class="form-group row">
-            <label for="recipe_name" class="col-sm-2 col-form-label">Recipe title</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="recipe_name" name="recipe_name">
-            </div>
+<div class="flex-container form-card container">
+    <div class="row">
+        <div class="col-sm-6">
+            <img class="form-photo" src="../../static/images/cupcakes-pink.jpg" alt="">
         </div>
-        <div class="form-group row">
-            <label for="author" class="col-sm-2 col-form-label">Author</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="author" name="author">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="category_name" class="col-sm-2 col-form-label">Category</label>
-            <div class="col-sm-10">
-                <select class="form-control" id="category_name" name="category_name" required>
-                    <option value="" disabled selected>Choose category</option>
-                    {% for category in categories %}
-                        <option alue="{{ category.category_name }}">{{ category.category_name }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-        </div>
-        
-         <fieldset class="form-group">
-            <div class="row">
-            <legend class="col-form-label col-sm-2 pt-0">Health Rating</legend>
-            <div class="col-sm-10">
-                <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="guilt_free" value="option1" checked>
-                <label class="form-check-label" for="guilt_free">
-                    Guilt free
-                </label>
+        <div class="col-sm-6">
+            <form method="POST" action="" class="recipe-form">
+                <div class="form-container">
+                    <label for="recipe_name"></label>
+                    <input type="text" class="form-input" id="recipe_name" name="recipe_name" placeholder="Recipe Title">
                 </div>
-                <div class="form-check">
-                <input class="form-check-input" type="radio" name="gridRadios" id="good_bad" value="option2">
-                <label class="form-check-label" for="good_bad">
-                    Some good some bad
-                </label>
+                <div class="form-container">
+                    <label for="author"></label>
+                    <input type="text" class="form-input" id="author" name="author" placeholder="Author">
                 </div>
-                <div class="form-check disabled">
-                <input class="form-check-input" type="radio" name="gridRadios" id="unhealthy" value="option3">
-                <label class="form-check-label" for="unhealthy">
-                    Unhealthy but worth it!
-                </label>
+                <div class="form-container">
+                    <label for="category_name"></label>
+                    <select class="form-input" id="category_name" name="category_name" required>
+                            <option value="" disabled selected>Choose category</option>
+                            {% for category in categories %}
+                                <option alue="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endfor %}
+                    </select>
                 </div>
-              </div>
-            </div>
-  </fieldset>
+                
+                <!--
+                <fieldset class="form-container">
+                    <div class="row">
+                    <legend>Health Rating</legend>
+                    <div class="col-sm-10">
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="guilt_free" value="option1" checked>
+                        <label class="form-check-label" for="guilt_free">
+                            Guilt free
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="good_bad" value="option2">
+                        <label class="form-check-label" for="good_bad">
+                            Some good some bad
+                        </label>
+                        </div>
+                        <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="unhealthy" value="option3">
+                        <label class="form-check-label" for="unhealthy">
+                            Unhealthy but worth it!
+                        </label>
+                        </div>
+                    </div>
+                    </div>
+        </fieldset> -->
 
-
-        <div class="form-group row">
-            <label for="serves" class="col-sm-2 col-form-label">Serves</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="serves" name="serves">
-            </div>
+                <div class="form-container">
+                    <label for="serves"></label>
+                    <input type="text" class="form-input" id="serves" name="serves" placeholder="Serves">
+                </div>
+                <div class="form-container">
+                    <label for="date_baked"></label>
+                    <input type="text" class="form-input" id="date_baked" name="date_baked" placeholder="Date baked">
+                </div>
+                <div class="form-container">
+                    <label for="notes"></label>
+                    <input type="text" class="form-input" id="notes" name="notes" placeholder="Notes">
+                </div>
+                <div class="form-container">
+                    <label for="ingredients"></label>
+                    <input type="text" class="form-input" id="ingredients" name="ingredients" placeholder="Ingredients">
+                </div>
+                <div class="form-container">
+                    <label for="method"></label>
+                    <input type="text" class="form-input" id="method" name="method" placeholder="Method">
+                </div>
+                <div class="center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
         </div>
-        <div class="form-group row">
-            <label for="date_baked" class="col-sm-2 col-form-label">Date baked</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="date_baked" name="date_baked" placeholder="DD/MM/YY">
-            </div>
-        </div>
-        
-       
-
-        <div class="form-group row">
-            <label for="notes" class="col-sm-2 col-form-label">Notes</label>
-            <div class="col-sm-10"> 
-                <input type="text" class="form-control" id="notes" name="notes">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="ingredients" class="col-sm-2 col-form-label">Ingredients</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="ingredients" name="ingredients">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="method" class="col-sm-2 col-form-label">Method</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="method" name="method">
-            </div>
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-</div>    
+    </div>
+</div>
+  
 
 {% endblock %}

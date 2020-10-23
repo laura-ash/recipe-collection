@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap")
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 body {
-  font-family: 'Roboto', sans-serif;
+    background-color: !important #fff0f0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .alert {
@@ -12,4 +12,41 @@ body {
 .alert-info {
     padding: 5px;
     font-size: 1rem;
+}
+
+.form-input {
+    border: none;
+    border-bottom: 1px solid #686d76;
+    padding: 5px;
+    margin: 5px;
+    width: 100%;
+}
+
+input:focus {
+      border-bottom: 2.5px solid pink;
+      outline: 0;  
+}
+
+.center {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.recipe-form {
+    width: 75%;
+}
+
+.form-card {
+    margin: 5%;
+}
+
+.form-photo {
+    background-position: left center;
+    background-size: inherit;
+    max-height: 70%;
 }
