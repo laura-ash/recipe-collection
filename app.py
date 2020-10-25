@@ -26,7 +26,7 @@ def get_recipes():
 @app.route("/<bob>")
 def get_bob(bob):
     recipes = mongo.db.recipes.find()
-    return render_template("pages/recipes.html", recipes=recipes,title="Recipe main page",heaven=bob)
+    return render_template("pages/recipes.html", recipes=recipes,title="Recipe main page",heaven=bob) 
 
 
 @app.route("/register", methods=["GET","POST"])
@@ -118,11 +118,16 @@ def add_recipe():
     ratings = mongo.db.health_rating.find().sort("health_rating",1)
     return render_template("pages/add_recipe.html", categories=categories, ratings=ratings)
 
-    
+
+@app.route('/recipes/<recipe>', methods=["GET"])
+def recipe_page(recipe):
+    recipe = mongo.db.recipes.find_one(
+        {"recipe_name": session["recipe"]})["recipe_name"]
+    return render_template("recipe_page.html", recipe=recipe)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
-            port=int(os.environ.get("PORT")),
-            debug=True)
-
-
+        port=int(os.environ.get("PORT")),
+        debug=True)
 
