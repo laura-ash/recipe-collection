@@ -98,7 +98,8 @@ def logout():
 @app.route("/add_recipe")
 def add_recipe():
     categories = mongo.db.categories.find().sort("category_name",1)
-    return render_template("pages/add_recipe.html", categories=categories)
+    ratings = mongo.db.health_rating.find().sort("health_rating",1)
+    return render_template("pages/add_recipe.html", categories=categories, ratings=ratings)
 
     
 if __name__ == "__main__":
