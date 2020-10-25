@@ -20,22 +20,24 @@
     <div class="container">
 
     <!-- Page Heading -->
-    {% for recipe in recipes %}
+   
     <div class="row">
+        {% for recipe in recipes %}
         <div class="col-lg-4 col-sm-6 mb-4">
         <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="recipe-picture"></a>
             <div class="card-body">
             <h4 class="card-title">
                 <a href="#">{{recipe.name}}</a>
             </h4>
-            <p class="card-text">{{recipe.description}}</p>
-            <p>by: {{ recipe.created_by }}</p>
+            <p class="card-text">{{recipe.category_name}}</p>
+            <p class="card-text">Submitted by {{ recipe.created_by }}</p>
             </div>
         </div>
         </div>
+        {% endfor %}
     </div>
-    {% endfor %}
+    
     <!-- /.row -->
 
     <!-- Pagination -->
