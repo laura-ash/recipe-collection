@@ -16,10 +16,16 @@ body {
 
 .form-input {
     border: none;
-    border-bottom: 1px solid #686d76;
+    border-bottom: 1px solid white;
     padding: 5px;
     margin: 5px;
     width: 100%;
+    background-color: #ff4b5c;
+    color: white;
+}
+
+::placeholder {
+    color: white;
 }
 
 input:focus {
@@ -39,14 +45,29 @@ input:focus {
 
 .recipe-form {
     width: 75%;
+    padding: 5% 0;
 }
 
 .form-card {
-    margin: 5%;
+    margin: 8% 5%;
+    border: 2px solid #ff4b5c;;
+    background-color: #ff4b5c;
+    border-radius: 2%;
 }
+
+
+
 
 .form-photo {
     background-position: left center;
     background-size: inherit;
     max-height: 70%;
+}
+
+.button {
+    background-color: white;
+    border-radius: 10%;
+    border: 1px #fff;
+    padding: 1%;
+    margin-top: 2%;    
 }
