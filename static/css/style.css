@@ -27,7 +27,7 @@ body {
     padding: 5px;
     margin: 5px;
     width: 100%;
-    background-color: #ff4b5c;
+    background-color: #c3aed6;
     color: white;
 }
 
@@ -57,8 +57,8 @@ input:focus {
 
 .form-card {
     margin: 8% 5%;
-    border: 2px solid #ff4b5c;;
-    background-color: #ff4b5c;
+    border: 2px solid #c3aed6;;
+    background-color: #c3aed6;
     border-radius: 2%;
 }
 
@@ -77,4 +77,8 @@ input:focus {
     border: 1px #fff;
     padding: 1%;
     margin-top: 2%;    
+}
+
+.icon {
+    width: 5%;
 }
