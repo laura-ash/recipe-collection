@@ -13,4 +13,18 @@
         {{recipe.ingredients}}<br>
         {{recipe.method}}<br>
    
+   <ul>
+    {% for ingredients in recipe %}
+        <li>{{recipe.ingredients}}</li>
+
+    {% endfor %}
+
+      {% for ingredients in recipe %}
+        <li>{{recipe.ingredients_array}}</li>
+
+    {% endfor %}
+    </ul>
+        
+
+
 {% endblock %}
