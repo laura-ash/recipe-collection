@@ -17,7 +17,7 @@
             </h4> 
             <p class="card-text">{{recipe.category_name}}</p>
             <p class="card-text">Submitted by {{ recipe.created_by }}</p>
-            <a href="#"  class="button">Edit</a>
+            <a href="{{ url_for( 'edit_recipe', recipe_id=recipe._id )}}"  class="button">Edit</a>
             <a href="#"  class="button">Remove</a>
             </div>
         </div>

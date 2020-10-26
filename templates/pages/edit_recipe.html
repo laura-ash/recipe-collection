@@ -1,0 +1,65 @@
+{% extends "layout/base.html" %}
+{% block content %}
+
+<div class="flex-container form-card container">
+    <form method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="recipe-form row">
+        <img src="../../static/images/muffin.jpg" class="form-image col-sm-6" alt="">
+        <div class="col-sm-6">
+            <div class="form-container">
+                <label for="recipe_name"></label>
+                <input type="text" class="form-input" id="recipe_name" name="recipe_name" placeholder="Recipe Title">
+            </div>
+            <div class="form-container">
+                <label for="author"></label>
+                <input type="text" class="form-input" id="author" name="author" placeholder="Author">
+            </div>
+            <div class="form-container">
+                <label for="category_name"></label>
+                <select class="form-input" id="category_name" name="category_name" required>
+                        <option value="" disabled selected>Choose category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                </select>
+            </div>
+
+            <div class="form-container">
+                <label for="health_rating"></label>
+                <select class="form-input" id="health_rating" name="health_rating" required>
+                        <option value="" disabled selected>Choose health rating</option>
+                        {% for rating in ratings %}
+                            <option value="{{ rating.health_rating }}">{{ rating.health_rating }}</option>
+                        {% endfor %}
+                </select>
+            </div>
+
+            
+            <div class="form-container">
+                <label for="serves"></label>
+                <input type="text" class="form-input" id="serves" name="serves" placeholder="Serves">
+            </div>
+            <div class="form-container">
+                <label for="date_baked"></label>
+                <input type="text" class="form-input" id="date_baked" name="date_baked" placeholder="Date baked">
+            </div>
+            <div class="form-container">
+                <label for="notes"></label>
+                <input type="text" class="form-input" id="notes" name="notes" placeholder="Notes">
+            </div>
+            <div class="form-container">
+                <label for="ingredients"></label>
+                <input type="text" class="form-input" id="ingredients" name="ingredients" placeholder="Ingredients">
+            </div>
+            <div class="form-container">
+                <label for="method"></label>
+                <input type="text" class="form-input" id="method" name="method" placeholder="Method">
+            </div>
+            <div class="center">
+                <button type="submit" class="button">Edit Recipe!</button>
+            </div>
+        </div>
+    </form>
+</div>
+  
+
+{% endblock %}
