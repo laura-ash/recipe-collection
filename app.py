@@ -121,9 +121,8 @@ def add_recipe():
 
 @app.route('/recipes/<recipe>', methods=["GET"])
 def recipe_page(recipe):
-    recipe = mongo.db.recipes.find_one(
-        {"recipe_name": session["recipe"]})["recipe_name"]
-    return render_template("recipe_page.html", recipe=recipe)
+    recipe = mongo.db.recipes.find_one({"name": recipe})
+    return render_template("pages/recipe_page.html", recipe=recipe)
 
 
 if __name__ == "__main__":

@@ -28,7 +28,7 @@
             <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="recipe-picture"></a>
             <div class="card-body">
             <h4 class="card-title">
-                <a href="#">{{ recipe.name }}</a>
+                <a href="{{ url_for('recipe_page', recipe=recipe.name)}}">{{ recipe.name }}</a>
             </h4> 
             <p class="card-text">{{recipe.category_name}}</p>
             <p class="card-text">Submitted by {{ recipe.created_by }}</p>
