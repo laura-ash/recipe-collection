@@ -1,16 +1,26 @@
 {% extends "layout/base.html" %}
 {% block content %}
 
-<h1>Recipe Page</h1>
-<h1>{{recipe_name}}</h1>
-    
-        {{recipe.name}}<br>
-        {{recipe.author}}<br>
-        {{recipe.health_rating}}<br>
-        {{recipe.serves}}<br>
-        {{recipe.create_date}}<br>
-        {{recipe.notes}}<br>
-        {{recipe.method}}<br>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <img src="../../static/images/cupcakes-pink.jpg" alt="recipe-picture" class="recipe-pic">        
+            </div>
+            <div class="col-sm-7 center">
+                <h1 class="recipe-title">{{recipe.name}}</h1>
+                <div class="vl"></div>
+                <h3><i class="far fa-user icon"></i> {{ recipe.created_by }}</h3>
+                <h3><i class="fas fa-pen icon"></i> {{recipe.author}}</h3>
+                <h3><i class="fas fa-weight icon"></i> {{recipe.health_rating}}</h3>
+                <h3><i class="fas fa-utensil-spoon icon"></i>{{recipe.serves}} servings</h3>
+                <h3><i class="far fa-calendar-alt icon"></i>{{recipe.create_date}}</h3>
+            </div>
+        </div>
+    </div>
+
+
+        {{recipe.notes}}
+        {{recipe.method}}
    
   
     <ul>
@@ -21,3 +31,4 @@
     
 
 {% endblock %}
+

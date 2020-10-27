@@ -6,6 +6,8 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+
+
 .title {
     font-family: 'Sacramento', cursive;
     font-size: 3rem;
@@ -85,3 +87,38 @@ input:focus {
 .icon {
     width: 5%;
 }
+
+/* Recipe Page */ 
+
+.recipe-pic {
+    max-width: 100%;
+}
+
+
+h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.center {
+    margin: auto;
+    text-align: left;
+    padding-left: 3%;
+}
+
+.recipe-title {
+    padding-bottom: 3%;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+.icon {
+    padding-right: 1%;
+}
+
+.vl {
+    border-bottom: 2px solid black;
+    width: 10%;
+    margin-bottom: 5%;
+}
+
