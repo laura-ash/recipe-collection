@@ -99,7 +99,7 @@ def logout():
 def add_recipe():
     if request.method == "POST":
         recipe = {
-            "recipe_name": request.form.get("recipe_name"),
+            "name": request.form.get("recipe_name"),
             "author": request.form.get("author"),
             "category_name": request.form.get("category_name"),
             "health_rating": request.form.get("health_rating"),
@@ -107,6 +107,7 @@ def add_recipe():
             "date_baked": request.form.get("date_baked"),
             "notes": request.form.get("notes"),
             "ingredients": request.form.getlist("ingredients"),
+            "ingredients_array": request.form.getlist("ingredients_array"),
             "method": request.form.getlist("method"),
             "created_by": session["user"]
         }
@@ -123,7 +124,8 @@ def add_recipe():
 def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name",1)
-    return render_template("pages/edit_recipe.html", recipe=recipe, categories=categories)
+    ratings = mongo.db.health_rating.find().sort("health_rating",1)
+    return render_template("pages/edit_recipe.html", recipe=recipe, categories=categories, ratings=ratings)
 
 
 @app.route('/recipes/<recipe>', methods=["GET"])

@@ -32,7 +32,11 @@
                 <select class="form-input" id="health_rating" name="health_rating" required>
                         <option value="" disabled selected>Choose health rating</option>
                         {% for rating in ratings %}
-                            <option value="{{ rating.health_rating }}">{{ rating.health_rating }}</option>
+                            {% if rating.health_rating == recipe.health_rating %}
+                                <option value="{{ rating.health_rating }}" selected>{{ rating.health_rating }}</option>
+                            {% else %}
+                                <option value="{{ rating.health_rating }}">{{ rating.health_rating }}</option>
+                            {% endif %}
                         {% endfor %}
                 </select>
             </div>

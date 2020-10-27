@@ -10,21 +10,14 @@
         {{recipe.serves}}<br>
         {{recipe.create_date}}<br>
         {{recipe.notes}}<br>
-        {{recipe.ingredients}}<br>
         {{recipe.method}}<br>
    
-   <ul>
-    {% for ingredients in recipe %}
-        <li>{{recipe.ingredients}}</li>
-
-    {% endfor %}
-
-      {% for ingredients in recipe %}
-        <li>{{recipe.ingredients_array}}</li>
-
-    {% endfor %}
+  
+    <ul>
+        {% for ingredient in recipe.ingredients_array %}
+        <li>{{ ingredient }}</li>
+        {% endfor %}
     </ul>
-        
-
+    
 
 {% endblock %}
