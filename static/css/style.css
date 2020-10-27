@@ -175,3 +175,18 @@ h3 {
 .nav-link {
     margin: auto;
 }
+
+/* Footer */
+
+footer {
+    height: 25vh;
+    background: #FFAFB0;
+    color: #fff;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
