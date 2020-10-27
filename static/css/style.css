@@ -164,5 +164,14 @@ h3 {
 }
 
 .logo {
-    width: 25%;
+    width: 50%;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-link {
+    margin: auto;
 }

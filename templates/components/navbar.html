@@ -2,8 +2,11 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <ul class="navbar-nav center">
+    <div class="nav-flex center">
+        <img src="../../static/images/recipe-logo-svg.svg" alt="recipe-logo" class="logo">
+    </div>
+    <div class="collapse navbar-collapse nav-flex" id="navbarTogglerDemo01">
+        <ul class="nav justify-content-center">
             <li class="nav-item active">
                 <a class="nav-link" href="{{ url_for('get_recipes') }}">Home</a>
             </li>
@@ -14,7 +17,6 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('add_recipe') }}">Add Recipe</a>
                 </li>
-                <img src="../../static/images/recipe-logo-svg.svg" alt="recipe-logo" class="logo">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
                 </li>
