@@ -10,10 +10,7 @@ body {
 
 
 
-.title {
-    font-family: 'Sacramento', cursive;
-    font-size: 3rem;
-}
+
 
 .alert {
     text-align: center;
@@ -138,4 +135,34 @@ h3 {
 
 .shadow {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+
+/* Nav link */
+
+.navbar {
+    margin-bottom: 5%;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    color: #1400A2;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.center {
+    text-align: center;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 25%;
 }

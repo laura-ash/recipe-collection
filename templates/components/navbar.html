@@ -3,9 +3,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <img src="../../static/images/cupcake-icon.png" alt="Icon of a cupcake" class="icon">
-        <a class="navbar-brand title" href="#">Gorgeen Recipes</a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <ul class="navbar-nav center">
             <li class="nav-item active">
                 <a class="nav-link" href="{{ url_for('get_recipes') }}">Home</a>
             </li>
@@ -14,12 +12,13 @@
                     <a class="nav-link" href="{{ url_for('get_recipes') }}">Recipes</a>
                 </li>
                 <li class="nav-item">
-                   <a class="nav-link" href="{{ url_for('add_recipe') }}">Add Recipe</a>
+                    <a class="nav-link" href="{{ url_for('add_recipe') }}">Add Recipe</a>
                 </li>
+                <img src="../../static/images/recipe-logo-svg.svg" alt="recipe-logo" class="logo">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('profile', username=session['user']) }}">Profile</a>
                 </li>
-                 <li class="nav-item">
+                    <li class="nav-item">
                     <a class="nav-link" href="{{ url_for('logout') }}">Log out</a>
                 </li>
             {% else %}
@@ -28,6 +27,5 @@
                 </li>
             {% endif %}
         </ul>       
-        </form>
     </div>
     </nav>
