@@ -8,20 +8,7 @@
    
     <div class="row">
         {% for recipe in recipes %}
-        <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="card h-100">
-            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt="recipe-picture"></a>
-            <div class="card-body">
-            <h4 class="card-title">
-                <a href="{{ url_for('recipe_page', recipe=recipe.name)}}">{{ recipe.name }}</a>
-            </h4> 
-            <p class="card-text">{{recipe.category_name}}</p>
-            <p class="card-text">Submitted by {{ recipe.created_by }}</p>
-            <a href="{{ url_for( 'edit_recipe', recipe_id=recipe._id )}}"  class="button">Edit</a>
-            <a href="#"  class="button">Remove</a>
-            </div>
-        </div>
-        </div>
+            {% include 'components/recipe.html' %}
         {% endfor %}
     </div>
     
