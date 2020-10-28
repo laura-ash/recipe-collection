@@ -106,8 +106,7 @@ def add_recipe():
             "serves": request.form.get("serves"),
             "date_baked": request.form.get("date_baked"),
             "notes": request.form.get("notes"),
-            "ingredients": request.form.getlist("ingredients"),
-            "ingredients_array": request.form.getlist("ingredients_array"),
+            "ingredients": request.form.get("ingredients").split(','),
             "method": request.form.getlist("method"),
             "created_by": session["user"]
         }
