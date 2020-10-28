@@ -154,10 +154,6 @@ h3 {
     text-transform: uppercase;
 }
 
-.center {
-    text-align: center;
-}
-
 .nav-center {
     display: flex;
     justify-content: center;
