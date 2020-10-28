@@ -30,7 +30,7 @@ def get_bob(bob):
 
 
 @app.route("/register", methods=["GET","POST"])
-def get_register():
+def register():
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -48,7 +48,7 @@ def get_register():
         session["user"] = request.form.get("username").lower()
         flash("Registration successful")
         return redirect(url_for("profile", username=session["user"]))
-    return render_template("pages/register.html")
+    return render_template("pages/auth.html", login=False)
 
 
 @app.route("/login", methods=["GET", "POST"])
@@ -73,7 +73,7 @@ def login():
             # username doesn't exist
             flash("Looks like this is an invalid username and/or password!")
             return redirect(url_for("login"))
-    return render_template("pages/login.html")
+    return render_template("pages/auth.html", login=True)
 
 
 @app.route("/profile/<username>", methods=["GET","POST"])
