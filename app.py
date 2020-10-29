@@ -21,6 +21,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+cloudinary.config(
+    cloud_name=os.environ.get('CLOUD_NAME'),
+    api_key=os.environ.get('API_KEY'),
+    api_secret=os.environ.get('API_SECRET')
+) 
+
+
+
 @app.route("/")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
@@ -102,6 +110,8 @@ def logout():
 @app.route("/add_recipe", methods=["GET","POST"])
 def add_recipe():
     if request.method == "POST":
+        photo = request.files['photo_url']
+        photo_upload = cloudinary.uploader.upload(photo)
         recipe = {
             "name": request.form.get("recipe_name"),
             "author": request.form.get("author"),
@@ -112,7 +122,8 @@ def add_recipe():
             "notes": request.form.get("notes"),
             "ingredients": request.form.get("ingredients").split(','),
             "method": request.form.getlist("method"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            'photo_url': photo_upload['secure_url']
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe successfully submitted")
@@ -153,16 +164,11 @@ def delete_recipe(recipe_id):
     flash("Recipe successfully deleted")
     return redirect(url_for("get_recipes"))
 
+
 @app.route('/recipes/<recipe>', methods=["GET"])
 def recipe_page(recipe):
     recipe = mongo.db.recipes.find_one({"name": recipe})
     return render_template("pages/recipe_page.html", recipe=recipe)
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
