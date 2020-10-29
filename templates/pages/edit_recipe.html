@@ -7,16 +7,16 @@
         <div class="col-sm-6">
             <div class="form-container">
                 <label for="recipe_name"></label>
-                <input type="text" class="form-input" id="recipe_name" name="recipe_name" placeholder="Recipe Title">
+                <input type="text" class="form-input" id="recipe_name" value="{{ recipe.name }}" name="recipe_name" placeholder="Recipe Title">
             </div>
             <div class="form-container">
                 <label for="author"></label>
-                <input type="text" class="form-input" id="author" name="author" placeholder="Author">
+                <input type="text" class="form-input" id="author" value="{{ recipe.author }}" name="author" placeholder="Author">
             </div>
             <div class="form-container">
                 <label for="category_name"></label>
                 <select class="form-input" id="category_name" name="category_name" required>
-                        <option value="" disabled selected>Choose category</option>
+                        <option value="" disabled>Choose category</option>
                         {% for category in categories %}
                                 {% if category.category_name == recipe.category_name %}
                                     <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
@@ -30,7 +30,7 @@
             <div class="form-container">
                 <label for="health_rating"></label>
                 <select class="form-input" id="health_rating" name="health_rating" required>
-                        <option value="" disabled selected>Choose health rating</option>
+                        <option value="" disabled>Choose health rating</option>
                         {% for rating in ratings %}
                             {% if rating.health_rating == recipe.health_rating %}
                                 <option value="{{ rating.health_rating }}" selected>{{ rating.health_rating }}</option>
@@ -44,23 +44,23 @@
             
             <div class="form-container">
                 <label for="serves"></label>
-                <input type="text" class="form-input" id="serves" name="serves" placeholder="Serves">
+                <input type="text" class="form-input" id="serves" value="{{ recipe.serves }}"name="serves" placeholder="Serves">
             </div>
             <div class="form-container">
                 <label for="date_baked"></label>
-                <input type="text" class="form-input" id="date_baked" name="date_baked" placeholder="Date baked">
+                <input type="text" class="form-input" id="date_baked" value="{{ recipe.create_date }}"name="date_baked" placeholder="Date baked">
             </div>
             <div class="form-container">
                 <label for="notes"></label>
-                <input type="text" class="form-input" id="notes" name="notes" placeholder="Notes">
+                <input type="text" class="form-input" id="notes" value="{{ recipe.notes }}" name="notes" placeholder="Notes">
             </div>
             <div class="form-container">
                 <label for="ingredients"></label>
-                <input type="text" class="form-input" id="ingredients" name="ingredients" placeholder="Ingredients">
+                <input type="text" class="form-input" id="ingredients" value="{{ recipe.ingredients }}" name="ingredients" placeholder="Ingredients">
             </div>
             <div class="form-container">
                 <label for="method"></label>
-                <input type="text" class="form-input" id="method" name="method" placeholder="Method">
+                <input type="text" class="form-input" id="method" value="{{ recipe.method }}" name="method" placeholder="Method">
             </div>
             <div class="center">
                 <button type="submit" class="button">Edit Recipe!</button>
