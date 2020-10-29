@@ -143,6 +143,12 @@ def edit_recipe(recipe_id):
     return render_template("pages/edit_recipe.html", recipe=recipe, categories=categories, ratings=ratings)
 
 
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.tasks.remove({"_id": ObjectId(recipe_id)})
+    flash("Recipe successfully deleted")
+    return redirect(url_for("get_recipes"))
+
 @app.route('/recipes/<recipe>', methods=["GET"])
 def recipe_page(recipe):
     recipe = mongo.db.recipes.find_one({"name": recipe})
