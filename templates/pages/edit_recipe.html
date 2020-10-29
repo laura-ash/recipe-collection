@@ -63,7 +63,8 @@
                 <input type="text" class="form-input" id="method" value="{{ recipe.method }}" name="method" placeholder="Method">
             </div>
             <div class="center">
-                <button type="submit" class="button">Edit Recipe!</button>
+                <button type="submit" class="button">Edit</button>
+                <a href="{{ url_for('get_recipes')}}">Cancel</a>
             </div>
         </div>
     </form>
