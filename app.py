@@ -1,4 +1,8 @@
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
 from flask import (
     Flask, flash, render_template, 
     redirect, request, session, url_for)
@@ -155,8 +159,15 @@ def recipe_page(recipe):
     return render_template("pages/recipe_page.html", recipe=recipe)
 
 
+
+
+
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
         port=int(os.environ.get("PORT")),
         debug=True)
+
 
