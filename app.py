@@ -123,7 +123,7 @@ def add_recipe():
             "ingredients": request.form.get("ingredients").split(','),
             "method": request.form.getlist("method"),
             "created_by": session["user"],
-            'photo_url': photo_upload['secure_url']
+            "photo_url": photo_upload["secure_url"]
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe successfully submitted")
@@ -147,7 +147,8 @@ def edit_recipe(recipe_id):
             "notes": request.form.get("notes"),
             "ingredients": request.form.get("ingredients").split(','),
             "method": request.form.getlist("method"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "photo_url": photo_upload["secure_url"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)},submit)
         flash("Recipe successfully updated")
