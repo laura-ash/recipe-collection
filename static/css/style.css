@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
+html {
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
-    color: #1400A2;
+    color: #000000;
 }
 
 
@@ -145,7 +147,7 @@ h3 {
 
 .nav-link {
     text-transform: uppercase;
-    color: #1400A2;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -176,17 +178,51 @@ h3 {
 
 footer {
     height: 25vh;
-    background: #FFAFB0;
-    color: #fff;
+    margin-bottom: 5%;
+} 
+
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 2%;
+}
+
+.dot-1 {
+    background-color: #b7efcd;
+}
+
+.dot-2 {
+    background-color: #fde2e2;
+}
+
+.dot-3 {
+    background-color: #99d8d0;
+}
+
+.dot-4 {
+    background-color: #c3aed6;
+}
+
+.vl-footer {
+    border-bottom: 1px solid black;
+    width: 100%;
+    margin-bottom: 5%;
 }
 
 .footer-flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    margin-top: auto;
 }
+
+.footer-text {
+    margin-bottom: 2%;
+}
+
+
+
 
 /* login */
 
