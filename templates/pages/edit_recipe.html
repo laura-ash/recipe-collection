@@ -1,36 +1,43 @@
 {% extends "layout/base.html" %}
 {% block content %}
 
+
 <div class="flex-container form-card container">
-    <form method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="recipe-form row">
-        <img src="../../static/images/muffin.jpg" class="form-image col-sm-6" alt="">
-        <div class="col-sm-6">
-            <div class="form-container">
+    <form method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="recipe-form row" enctype="multipart/form-data">
+        <div class="form-container col-sm-12">
                 <label for="recipe_name"></label>
-                <input type="text" class="form-input" id="recipe_name" value="{{ recipe.name }}" name="recipe_name" placeholder="Recipe Title">
+                <input type="text" class="form-input" id="recipe_name" value="{{ recipe.name }}" name="recipe_name" placeholder="Recipe Title" required>
             </div>
-            <div class="form-container">
+            <div class="form-container col-sm-12">
                 <label for="author"></label>
-                <input type="text" class="form-input" id="author" value="{{ recipe.author }}" name="author" placeholder="Author">
+                <input type="text" class="form-input" id="author" value="{{ recipe.author }}"name="author" placeholder="Author" required>
             </div>
-            <div class="form-container">
+            <div class="form-container col-sm-6">
+                <label for="serves"></label>
+                <input type="text" class="form-input" id="serves" value="{{ recipe.serves }}" name="serves" placeholder="Serves*">
+            </div>
+            <div class="form-container col-sm-6">
+                <label for="date_baked"></label>
+                <input type="text" class="form-input" id="date_baked" value="{{ recipe.create_date }}"name="date_baked" placeholder="Date baked" required>
+            </div>
+            <div class="form-container col-sm-6">
                 <label for="category_name"></label>
                 <select class="form-input" id="category_name" name="category_name" required>
-                        <option value="" disabled>Choose category</option>
+                        <option value="" disabled selected>Choose category</option>
                         {% for category in categories %}
-                                {% if category.category_name == recipe.category_name %}
-                                    <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                                {% else %}
-                                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                                {% endif %}
+                            {% if category.category_name == recipe.category_name %}
+                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
+                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
                         {% endfor %}
                 </select>
             </div>
 
-            <div class="form-container">
+            <div class="form-container col-sm-6">
                 <label for="health_rating"></label>
                 <select class="form-input" id="health_rating" name="health_rating" required>
-                        <option value="" disabled>Choose health rating</option>
+                        <option value="" disabled selected>Choose health rating</option>
                         {% for rating in ratings %}
                             {% if rating.health_rating == recipe.health_rating %}
                                 <option value="{{ rating.health_rating }}" selected>{{ rating.health_rating }}</option>
@@ -40,38 +47,26 @@
                         {% endfor %}
                 </select>
             </div>
-
-            
-            <div class="form-container">
-                <label for="serves"></label>
-                <input type="text" class="form-input" id="serves" value="{{ recipe.serves }}"name="serves" placeholder="Serves">
-            </div>
-            <div class="form-container">
-                <label for="date_baked"></label>
-                <input type="text" class="form-input" id="date_baked" value="{{ recipe.create_date }}"name="date_baked" placeholder="Date baked">
-            </div>
-            <div class="form-container">
+            <div class="form-container col-sm-12">
                 <label for="notes"></label>
-                <input type="text" class="form-input" id="notes" value="{{ recipe.notes }}" name="notes" placeholder="Notes">
+                <input type="text" class="form-input" id="notes" value="{{ recipe.notes }}"name="notes" placeholder="Notes" required>
             </div>
-            <div class="form-container">
+            <div class="form-container col-sm-12">
                 <label for="ingredients"></label>
-                <input type="text" class="form-input" id="ingredients" value="{{ recipe.ingredients }}" name="ingredients" placeholder="Ingredients">
+                <input type="text" class="form-input" id="ingredients" value="{{ recipe.ingredients }}" name="ingredients" placeholder="Ingredients. Ensure there is a comma between each one!">
             </div>
-            <div class="form-container">
+            <div class="form-container col-sm-12">
                 <label for="method"></label>
-                <input type="text" class="form-input" id="method" value="{{ recipe.method }}" name="method" placeholder="Method">
+                <input type="text" class="form-input" id="method" value="{{ recipe.method }}" name="method" placeholder="Method" required>
             </div>
-            <div class="btn">
-                <input type="file" accept="image/*" name="photo_url" id="photo_url">
+            <div class="btn col-sm-12 left-btn">
+                <input type="file" class="file" accept="image/*" name="photo_url" id="photo_url" value="{{ recipe.photo_url }}"required>
             </div>
-            <div class="center">
-                <button type="submit" class="button">Edit</button>
-                <a href="{{ url_for('get_recipes')}}">Cancel</a>
+            <div class="center col-sm-12 center-btn">
+                <button type="submit" class="button">Edit Recipe</button>
+                <a href="{{ url_for('get_recipes')}}" class="button link-btn">Remove</a>
             </div>
-        </div>
     </form>
 </div>
-  
 
 {% endblock %}

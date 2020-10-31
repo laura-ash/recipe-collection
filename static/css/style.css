@@ -64,6 +64,7 @@ input:focus {
     margin-bottom: 10%;
 }
 
+
 .center-btn {
     text-align: center;
 }
@@ -83,9 +84,19 @@ input:focus {
     border-radius: 5%;
     border: 2px solid #fff;
     padding: 1%;
-    margin-top: 2%;    
+    margin: 2%;    
     color: #fff;
     text-transform: uppercase;
+}
+
+.link-btn {
+    padding: 1.35%;
+}
+
+.btn-spacing {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
 }
 
 .icon {
