@@ -159,6 +159,25 @@ Favourites|favourites|array
 #### Planning: 
 There was a significant amount of time that went into planning this project, especially as I hadn't used the a lot of the technologies before. 
 
+## Bugs
+
+Problem: The form was throwing an error when trying to upload a photo. I hadn't used a form to upload a file before, so hadn't come across this. 
+Solution: After some troubleshooting, I noticed that I had missed adding the enctype to the form, so added in "enctype="multipart/form-data"", which solved this issue. 
+
+Problem: When users go to add ingredients and methods to their recipes, the idea is that these will then display in list form on the recipe page. However, this proved to be 
+an issue as when the form was first built all of the ingredients and method steps came through in one string. I realized that I needed to display these as arrays in MongoDB, 
+and also to try and figure out a way to pull the values from the arrays and display them on the recipe page.
+Solution: After investigating, I thought the best way to do this would be to use the split method and split the ingredients and method at the comma. This means the user has to 
+insert the ingredients and method with a comma in between each ingredient. I did consider using dynamic form fields for each ingredient and step which I could have implemented 
+with JavaScript, but I thought this would mean the user would have to paste individually each value rather than being able to paste directly from their favourite recipe site. I 
+thought this would be a better solution, and if the user misses a comma they can always edit this using the edit recipe function. 
+
+Problem: When editing a recipe, the current values for each of the form fields should populate into the form automatically. This was an issue for the ingredients and method section, 
+because the value for those would be the full array including the opening and closing brackets - "[]". This meant that when the user resubmitted the form to update the recipe, the 
+brackets were then added again into the array. 
+Solution:
+
+
 #### Testing: 
 
 #### Credits: 
