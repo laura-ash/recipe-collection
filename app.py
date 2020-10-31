@@ -148,7 +148,7 @@ def edit_recipe(recipe_id):
             "date_baked": request.form.get("date_baked"),
             "notes": request.form.get("notes"),
             "ingredients": request.form.get("ingredients").split(','),
-            "method": request.form.get("method").split(','),
+            "method": request.form.get("method").split('.'),
             "created_by": session["user"],
             "photo_url": photo_upload["secure_url"]
         }
@@ -158,12 +158,14 @@ def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name",1)
     ratings = mongo.db.health_rating.find().sort("health_rating",1)
-    return render_template("pages/edit_recipe.html", recipe=recipe, categories=categories, ratings=ratings)
+    ingredients = ", ".join(recipe["ingredients"])
+    method = ", ".join(recipe["method"])
+    return render_template("pages/edit_recipe.html", recipe=recipe, categories=categories, ratings=ratings, ingredients=ingredients, method=method)
 
 
 @app.route("/delete_recipe/<recipe_id>")
 def delete_recipe(recipe_id):
-    mongo.db.tasks.remove({"_id": ObjectId(recipe_id)})
+    mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe successfully deleted")
     return redirect(url_for("get_recipes"))
 
