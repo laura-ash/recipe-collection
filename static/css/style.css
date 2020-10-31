@@ -29,7 +29,7 @@ body {
     padding: 5px;
     margin: 5px;
     width: 100%;
-    background-color: #c3aed6;
+    background-color: #d2d3c9;
     color: white;
 }
 
@@ -58,8 +58,8 @@ input:focus {
 }
 
 .form-card {
-    border: 2px solid #c3aed6;;
-    background-color: #c3aed6;
+    border: 2px solid #d2d3c9;;
+    background-color: #d2d3c9;
     border-radius: 2%;
     margin-bottom: 10%;
 }
