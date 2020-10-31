@@ -175,7 +175,8 @@ thought this would be a better solution, and if the user misses a comma they can
 Problem: When editing a recipe, the current values for each of the form fields should populate into the form automatically. This was an issue for the ingredients and method section, 
 because the value for those would be the full array including the opening and closing brackets - "[]". This meant that when the user resubmitted the form to update the recipe, the 
 brackets were then added again into the array. 
-Solution:
+Solution: It was necessary to add the contents of the ingredients and method arrays, into one string separated by commas. I achieved this by building a variable in the app route 
+and using the python join() method. The new variable was then referenced in the template. 
 
 
 #### Testing: 

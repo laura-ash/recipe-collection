@@ -241,3 +241,13 @@ footer {
     margin-bottom: 10%;
 }
 
+/* recipe cards */
+
+.card-img, .card-img-top {
+    width: 280px;
+    height: 170px;
+}
+
+.card-button {
+    color: #686d76;
+}

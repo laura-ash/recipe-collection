@@ -51,13 +51,16 @@
                 <label for="notes"></label>
                 <input type="text" class="form-input" id="notes" value="{{ recipe.notes }}"name="notes" placeholder="Notes" required>
             </div>
+            
             <div class="form-container col-sm-12">
                 <label for="ingredients"></label>
-                <input type="text" class="form-input" id="ingredients" value="{{ recipe.ingredients }}" name="ingredients" placeholder="Ingredients. Ensure there is a comma between each one!">
+                <input type="text" class="form-input" id="ingredients" value="{{ ingredients }}" name="ingredients">
+                   
             </div>
+
             <div class="form-container col-sm-12">
                 <label for="method"></label>
-                <input type="text" class="form-input" id="method" value="{{ recipe.method }}" name="method" placeholder="Method" required>
+                <input type="text" class="form-input" id="method" value="{{ method }}" name="method" placeholder="Method" required>
             </div>
             <div class="btn col-sm-12 left-btn">
                 <input type="file" class="file" accept="image/*" name="photo_url" id="photo_url" value="{{ recipe.photo_url }}"required>
