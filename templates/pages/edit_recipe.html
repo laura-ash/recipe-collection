@@ -20,7 +20,7 @@
                 <label for="date_baked"></label>
                 <input type="text" class="form-input" id="date_baked" value="{{ recipe.create_date }}"name="date_baked" placeholder="Date baked" required>
             </div>
-            <div class="form-container col-sm-6">
+            <div class="form-container col-sm-6 f-space">
                 <label for="category_name"></label>
                 <select class="form-input" id="category_name" name="category_name" required>
                         <option value="" disabled selected>Choose category</option>
@@ -34,7 +34,7 @@
                 </select>
             </div>
 
-            <div class="form-container col-sm-6">
+            <div class="form-container col-sm-6 f-space">
                 <label for="health_rating"></label>
                 <select class="form-input" id="health_rating" name="health_rating" required>
                         <option value="" disabled selected>Choose health rating</option>
@@ -52,13 +52,13 @@
                 <input type="text" class="form-input" id="notes" value="{{ recipe.notes }}"name="notes" placeholder="Notes" required>
             </div>
             
-            <div class="form-container col-sm-12">
+            <div class="form-container col-sm-12 f-space">
                 <label for="ingredients"></label>
                 <input type="text" class="form-input" id="ingredients" value="{{ ingredients }}" name="ingredients">
                    
             </div>
 
-            <div class="form-container col-sm-12">
+            <div class="form-container col-sm-12 f-space">
                 <label for="method"></label>
                 <input type="text" class="form-input" id="method" value="{{ method }}" name="method" placeholder="Method" required>
             </div>
