@@ -3,17 +3,23 @@
 
 <div class="flex-container form-card container">
     <form method="POST" action="" class="recipe-form row" enctype="multipart/form-data">
-        <img src="../../static/images/muffin.jpg" class="form-image col-sm-6" alt="">
-        <div class="col-sm-6">
-            <div class="form-container">
+            <div class="form-container col-sm-12">
                 <label for="recipe_name"></label>
-                <input type="text" class="form-input" id="recipe_name" name="recipe_name" placeholder="Recipe Title">
+                <input type="text" class="form-input" id="recipe_name" name="recipe_name" placeholder="Recipe Title" required>
             </div>
-            <div class="form-container">
+            <div class="form-container col-sm-12">
                 <label for="author"></label>
-                <input type="text" class="form-input" id="author" name="author" placeholder="Author">
+                <input type="text" class="form-input" id="author" name="author" placeholder="Author" required>
             </div>
-            <div class="form-container">
+            <div class="form-container col-sm-6">
+                <label for="serves"></label>
+                <input type="text" class="form-input" id="serves" name="serves" placeholder="Serves*">
+            </div>
+            <div class="form-container col-sm-6">
+                <label for="date_baked"></label>
+                <input type="text" class="form-input" id="date_baked" name="date_baked" placeholder="Date baked" required>
+            </div>
+            <div class="form-container col-sm-6">
                 <label for="category_name"></label>
                 <select class="form-input" id="category_name" name="category_name" required>
                         <option value="" disabled selected>Choose category</option>
@@ -23,7 +29,7 @@
                 </select>
             </div>
 
-            <div class="form-container">
+            <div class="form-container col-sm-6">
                 <label for="health_rating"></label>
                 <select class="form-input" id="health_rating" name="health_rating" required>
                         <option value="" disabled selected>Choose health rating</option>
@@ -32,36 +38,24 @@
                         {% endfor %}
                 </select>
             </div>
-
-            
-            <div class="form-container">
-                <label for="serves"></label>
-                <input type="text" class="form-input" id="serves" name="serves" placeholder="Serves">
-            </div>
-            <div class="form-container">
-                <label for="date_baked"></label>
-                <input type="text" class="form-input" id="date_baked" name="date_baked" placeholder="Date baked">
-            </div>
-            <div class="form-container">
+            <div class="form-container col-sm-12">
                 <label for="notes"></label>
-                <input type="text" class="form-input" id="notes" name="notes" placeholder="Notes">
+                <input type="text" class="form-input" id="notes" name="notes" placeholder="Notes" required>
             </div>
-            <div class="form-container">
+            <div class="form-container col-sm-12">
                 <label for="ingredients"></label>
                 <input type="text" class="form-input" id="ingredients" name="ingredients" placeholder="Ingredients. Ensure there is a comma between each one!">
             </div>
-            <div class="form-container">
+            <div class="form-container col-sm-12">
                 <label for="method"></label>
-                <input type="text" class="form-input" id="method" name="method" placeholder="Method">
+                <input type="text" class="form-input" id="method" name="method" placeholder="Method" required>
             </div>
-            <div class="btn">
-                <input type="file" accept="image/*" name="photo_url" id="photo_url">
+            <div class="btn col-sm-12 left-btn">
+                <input type="file" class="file" accept="image/*" name="photo_url" id="photo_url" required>
             </div>
-
-            <div class="center">
-                <button type="submit" class="button">Add Recipe!</button>
+            <div class="center col-sm-12 center-btn">
+                <button type="submit" class="button">Add Recipe</button>
             </div>
-        </div>
     </form>
 </div>
         

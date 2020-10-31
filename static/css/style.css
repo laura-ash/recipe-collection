@@ -56,31 +56,34 @@ input:focus {
 }
 
 .form-card {
-    margin: 8% 5%;
     border: 2px solid #c3aed6;;
     background-color: #c3aed6;
     border-radius: 2%;
+    margin-bottom: 10%;
 }
 
-.form-image {
-    background-position: center;
-    background-size: contain;
-    width: 25%;
+.center-btn {
+    text-align: center;
 }
 
+.file {
+    color: #fff;
+    margin-top: 1.2rem;
+    margin-left: 5px;
+}
 
-.form-photo {
-    background-position: left center;
-    background-size: inherit;
-    max-height: 70%;
+.left-btn {
+    text-align: left;
 }
 
 .button {
-    background-color: white;
-    border-radius: 10%;
-    border: 1px #fff;
+    background-color: transparent;
+    border-radius: 5%;
+    border: 2px solid #fff;
     padding: 1%;
     margin-top: 2%;    
+    color: #fff;
+    text-transform: uppercase;
 }
 
 .icon {
@@ -99,11 +102,11 @@ h3 {
     text-transform: uppercase;
 }
 
-.center {
+/* .center {
     margin: auto;
     text-align: left;
     padding-left: 3%;
-}
+}*/
 
 .recipe-title {
     padding-bottom: 3%;
