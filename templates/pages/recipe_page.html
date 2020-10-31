@@ -37,7 +37,11 @@
         <div class="col-sm-8 block">
             <h3 class="bold">Method</h3>
             <div class="vl"></div>
-            <p> {{recipe.method}}</p>
+            <ol>
+                {% for method in recipe.method %}
+                <li>{{ method }}</li>
+                {% endfor %}
+            </ol>
         </div>
     </div>
 </div>

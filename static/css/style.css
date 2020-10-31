@@ -185,6 +185,7 @@ footer {
     justify-content: center;
     align-items: center;
     margin: auto;
+    margin-top: auto;
 }
 
 /* login */
@@ -192,3 +193,4 @@ footer {
 .login {
     margin-bottom: 10%;
 }
+
