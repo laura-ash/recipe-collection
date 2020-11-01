@@ -10,6 +10,9 @@ body {
     color: #686d76;
 }
 
+h3 {
+    color: #52057b;
+}
 
 a {
     color: #52057b;
@@ -141,10 +144,20 @@ label {
 .recipe-pic {
     max-width: 100%;
     max-height: 100%;
+    margin-bottom: 10%;
+}
+
+.left {
+    text-align: left;
+    margin: auto;
 }
 
 .card {
     object-fit: fill;
+}
+
+.recipe-block {
+    margin-bottom: 10%;
 }
 
 
@@ -160,11 +173,7 @@ h3 {
     text-transform: uppercase;
 }
 
-/* .center {
-    margin: auto;
-    text-align: left;
-    padding-left: 3%;
-}*/
+
 
 .recipe-title {
     padding-bottom: 3%;
