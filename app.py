@@ -8,6 +8,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+from flask_paginate import Pagination, get_page_args
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -96,7 +97,7 @@ def profile(username):
     if session["user"]:
         return render_template("pages/profile.html", username=username)
 
-    return render_template("profile.html", username=username)
+        return render_template("profile.html", username=username)
 
 
 @app.route("/logout")
@@ -119,7 +120,7 @@ def add_recipe():
             "serves": request.form.get("serves"),
             "date_baked": request.form.get("date_baked"),
             "notes": request.form.get("notes"),
-            "ingredients": request.form.get("ingredients").split(','),
+            "ingredients": request.form.get("ingredients").split('/'),
             "method": request.form.get("method").split('/'),
             "created_by": session["user"],
             "photo_url": photo_upload["secure_url"]
@@ -146,7 +147,7 @@ def edit_recipe(recipe_id):
             "serves": request.form.get("serves"),
             "date_baked": request.form.get("date_baked"),
             "notes": request.form.get("notes"),
-            "ingredients": request.form.get("ingredients").split(','),
+            "ingredients": request.form.get("ingredients").split('/'),
             "method": request.form.get("method").split('/'),
             "created_by": session["user"],
             "photo_url": photo_upload["secure_url"]
