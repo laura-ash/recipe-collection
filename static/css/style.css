@@ -26,6 +26,13 @@ a:hover {
     border-color: #ffafb0;
 }
 
+.capitalize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
 
 .alert {
     text-align: center;
@@ -308,4 +315,12 @@ footer {
 .auth-center {
     display: flex;
     justify-content: center;
+}
+
+/* Profile */
+
+.prof-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-transform: uppercase;
 }
