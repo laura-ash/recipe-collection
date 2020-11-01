@@ -11,7 +11,20 @@ body {
 }
 
 
+a {
+    color: #52057b;
+}
 
+a:hover {
+    text-decoration: underline;
+    color: #ffafb0;
+}
+
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: #ffafb0;
+    border-color: #ffafb0;
+}
 
 
 .alert {
@@ -128,6 +141,12 @@ label {
 }
 
 
+h1 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 2%;
+    color: #52057b;
+}
 
 h3 {
     font-size: 1.1rem;
@@ -271,3 +290,22 @@ footer {
     color: #686d76;
 }
 
+/* auth form */
+
+.auth-title {
+    color: #000;
+}
+
+.auth-txt {
+    margin-bottom: 20%;
+    margin-top: 3%;
+}
+
+#auth {
+    margin: auto;
+}
+
+.auth-center {
+    display: flex;
+    justify-content: center;
+}
