@@ -28,7 +28,6 @@ cloudinary.config(
 ) 
 
 
-
 @app.route("/")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())

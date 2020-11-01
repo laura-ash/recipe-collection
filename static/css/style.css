@@ -297,6 +297,11 @@ footer {
     color: #686d76;
 }
 
+.card-title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
 /* auth form */
 
 .auth-title {
