@@ -120,7 +120,7 @@ def add_recipe():
             "date_baked": request.form.get("date_baked"),
             "notes": request.form.get("notes"),
             "ingredients": request.form.get("ingredients").split(','),
-            "method": request.form.get("method").split(','),
+            "method": request.form.get("method").split('/'),
             "created_by": session["user"],
             "photo_url": photo_upload["secure_url"]
         }
@@ -147,7 +147,7 @@ def edit_recipe(recipe_id):
             "date_baked": request.form.get("date_baked"),
             "notes": request.form.get("notes"),
             "ingredients": request.form.get("ingredients").split(','),
-            "method": request.form.get("method").split('.'),
+            "method": request.form.get("method").split('/'),
             "created_by": session["user"],
             "photo_url": photo_upload["secure_url"]
         }
