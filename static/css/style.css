@@ -57,6 +57,12 @@ a:hover {
     overflow: hidden;
 }
 
+.form-text {
+    margin-left: 5px;
+    color: #fff;
+    font-style: italic;
+}
+
 ::placeholder {
     color: white;
 }

@@ -51,15 +51,14 @@
                 <label for="notes"></label>
                 <input type="text" class="form-input" id="notes" value="{{ recipe.notes }}"name="notes" placeholder="Notes" required>
             </div>
-            
             <div class="form-container col-sm-12 f-space">
                 <label for="ingredients"></label>
+                <p class="form-text">Ensure there is a comma between each ingredient.</p>
                 <input type="text" class="form-input" id="ingredients" value="{{ ingredients }}" name="ingredients">
-                   
             </div>
-
             <div class="form-container col-sm-12 f-space">
                 <label for="method"></label>
+                <p class="form-text">Ensure there is a slash '/' between each step."</p>
                 <input type="text" class="form-input" id="method" value="{{ method }}" name="method" placeholder="Method" required>
             </div>
             <div class="btn col-sm-12 left-btn">
