@@ -196,7 +196,12 @@ future so that the users can have better access to their accounts in the event o
 ## Planning:  + Testing: ✏️ 🔌
 
 #### Planning: 
-There was a significant amount of time that went into planning this project, especially as I hadn't used the a lot of the technologies before. 
+There was a significant amount of time that went into planning this project, especially as I hadn't used the a lot of the technologies before. This involved testing the 
+different forms and then comparing the data that ended up in the database. Especially with adding recipes, it was tricky to format them in the way I wanted. This was 
+especially relevant for the ingredients and method section, as these were arrays which the users would have to add and then they would need to be formatted to appear in 
+a list. 
+
+Testing was also carried out in different browsers and screen sizes to ensure that the code would support the popular browsers and also all different screen sizes. 
 
 ## Bugs
 
