@@ -143,7 +143,15 @@ Category name|category_name|String
 
 ## Features: 🎡
 
+* Users can create an account and log in 
+* Users can add recipes to the database
+* Users can edit the recipes they have added to the database
+* Users can delete the recipes they have added to the database
+
+
 ### Features that have been developed:
+
+
 
 ### Features that will be developed in the future:
 
