@@ -2,20 +2,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
-html {
-}
+
+/* General */ 
 
 body {
     font-family: 'Montserrat', sans-serif;
     color: #686d76;
 }
 
-h3 {
+h1 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 2%;
     color: #52057b;
 }
 
+h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: #52057b;
+}
+
+
 a {
     color: #52057b;
+}
+
+label {
+    color: #fff;
+    padding-left: 5px;
+    text-transform: uppercase;
+    margin-top: 2%;
 }
 
 a:hover {
@@ -46,6 +63,10 @@ a:hover {
     font-size: 1rem;
 }
 
+
+
+/* Recipe forms */ 
+
 .form-input {
     border: none;
     border-bottom: 1px solid white;
@@ -55,6 +76,16 @@ a:hover {
     background-color: #14274e;
     color: white;
     overflow: hidden;
+}
+
+.center {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .form-text {
@@ -72,16 +103,6 @@ input:focus {
       outline: 0;  
 }
 
-.center {
-    text-align: center;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-
 .recipe-form {
     width: 75%;
     padding: 5% 0;
@@ -92,13 +113,6 @@ input:focus {
     background-color: #14274e;
     border-radius: 2%;
     margin-bottom: 10%;
-}
-
-label {
-    color: #fff;
-    padding-left: 5px;
-    text-transform: uppercase;
-    margin-top: 2%;
 }
 
 .center-btn {
@@ -169,20 +183,6 @@ label {
 .recipe-button {
   margin-top: 5%;
 }
-
-h1 {
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    margin-bottom: 2%;
-    color: #52057b;
-}
-
-h3 {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-}
-
-
 
 .recipe-title {
     padding-bottom: 3%;
@@ -295,32 +295,11 @@ footer {
     margin-bottom: 2%;
 }
 
-
-
-
-/* login */
+/* Auth  */
 
 .login {
     margin-bottom: 10%;
 }
-
-/* recipe cards */
-
-.card-img, .card-img-top {
-    width: 100%;
-    height: 100%;
-}
-
-.card-button {
-    color: #686d76;
-}
-
-.card-title {
-    text-transform: uppercase;
-    font-size: 1.2rem;
-}
-
-/* auth form */
 
 .auth-title {
     color: #000;
