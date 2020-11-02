@@ -63,7 +63,21 @@ a:hover {
     font-size: 1rem;
 }
 
+/* Recipe cards */
 
+.card-img, .card-img-top {
+    width: 100%;
+    height: 100%;
+}
+
+.card-button {
+    color: #686d76;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
 
 /* Recipe forms */ 
 
@@ -215,6 +229,7 @@ input:focus {
 .shadow {
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
+
 
 /* Nav link */
 
