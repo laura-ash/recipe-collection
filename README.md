@@ -88,8 +88,8 @@ bright and enjoyable look, but were a bit bolder than the average pastel to ensu
 - Additional: #686d76 This charcoal grey was perfect for the nav bar headings and body text, as it is slightly less harsh than black but still very readable. 
 
 ### Images:
-The images on the website were chosen specifically to encourage people to get cooking. These show images of different delicious recipes, and people enjoying their time in the kitchen. 
-Users are also encouraged to upload pictures of the recipes that they have tried. 
+The images on the website were chosen specifically to encourage people to get cooking, and are to be uploaded alongside recipes as the users add them. These show images of 
+different delicious recipes, which should inspire the users to cook. 
 
 ## Wireframes/Flowcharts: 🔧
 The wireframes have been built to show on different sized devices.
@@ -106,26 +106,40 @@ The types of data that are stored in the MongoDB database.
 - Array
 - Binary
 
-Recipe  Collection:
+Recipes  Collection:
 **Title**|**Key in Collection**|**Data Type**
 :-----:|:-----:|:-----:
-
-Category|category_name|String
+Recipe ID|_id|ObjectID
 Recipe Name|name|String
 Recipe Author|author|String
+Category|category_name|String
 Health Rating|health_rating|String
 Serves|serves|Integer
-create_date|2 October, 2020|String
-
+Date Baked|date_baked|String
+Notes|notes|String
+Ingredients|ingredients|Array
+Method|method|Array
+Created by|created_by|String
+Photo URL|photo_url|String
 
 Users Collection:
 **Title**|**Key in Collection**|**Data Type**
 :-----:|:-----:|:-----:
 User ID|_id|ObjectID
-Name|name|String
+Username|username|String
 Password|password|Binary
-Recipes|recipes|array
-Favourites|favourites|array
+
+Health Rating Collection:
+**Title**|**Key in Collection**|**Data Type**
+:-----:|:-----:|:-----:
+Health ID|_id|ObjectID
+Health Rating|health_rating|String
+
+Categories Collection:
+**Title**|**Key in Collection**|**Data Type**
+:-----:|:-----:|:-----:
+Category ID|_id|ObjectID
+Category name|category_name|String
 
 ## Features: 🎡
 
