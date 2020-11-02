@@ -147,13 +147,30 @@ Category name|category_name|String
 * Users can add recipes to the database
 * Users can edit the recipes they have added to the database
 * Users can delete the recipes they have added to the database
+* Users can upload a photo alongside their recipe
 
 
 ### Features that have been developed:
-
+* When a user adds a recipe, it pushes the details from the add recipe form into Mongo. This means that the recipe is then within Mongo. Recipes are then pulled from 
+mongo on the main page, which allows all of the uplaoded recipes to be shown there. 
+* When a user has uploaded a recipe, they  have the ability to edit them too. When they click the edit button, they are brought to a form that has the current values 
+for that recipe prepopulated (except for the image, see below for more on this). The user can then edit what they like here. 
+* In order to input the ingredients and method, the user must add a "/" in between each ingredient and step in the method. This is for formatting purposes. It was 
+considered to use JavaScript here for dynamic form fields, where the user could add an extra input for each ingredient and step in the method. Although this would have 
+looked quite nice, the main issue with the functionality is that it would take much longer for the user to upload the recipe as they would have to copy and paste or add 
+each ingredient and step individually. 
+* In order to remove a recipe, the user can just select remove on the recipe card or page which will remove the recipe from Mongo, and thus remove it from the database 
+and the website.
+* On the main home page for the recipes, the user can see a list of all recipes uploaded by themselves and also other users. 
 
 
 ### Features that will be developed in the future:
+* The first thing on the list for future builds will be pagination. This will allow better organisation of the recipes that are added to the database and also it will allow 
+filtering based on user who uploaded the recipe, category and create date. 
+* While users can edit their recipes, they can't edit the photo they added to that recipe. This is because the file upload was much harder to pull through into the edit 
+form option. I would like to add this option to edit the photo going forward.
+* At the moment the user can create an account, but they don't have the ability to edit their password or change it if they have forgotten it. This would be good to add in 
+future so that the users can have better access to their accounts in the event of forgotten passwords. 
 
 
 ## Technologies Used: 👨‍💻
