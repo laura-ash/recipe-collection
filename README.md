@@ -72,7 +72,7 @@ Ellie says:
 As cooking should be a hobby, the website design was intended to be light, playful and enjoyable. 
 
 ### Fonts:
-I chose to use the sans-serif Roboto font for the website. Sans-serif was a good choice here for readability, and also it would be a less formal font which was suitable here for the 
+I chose to use the sans-serif Montserrat font for the website. Sans-serif was a good choice here for readability, and also it would be a less formal font which was suitable here for the 
 playful website design.
 
 ### Icons:
@@ -81,11 +81,11 @@ which part of the recipe shows ingredients and which part shows the method. FOnt
 
 ### Colours:
 The colour scheme chosen was bright which was intended to echo the fun side to cooking and sharing recipes. I went for a colour scheme that showed darker pastels, so they still had that 
-bright and enjoyable look, but were a bit bolder than the average pastel to ensure readability. \
+bright and enjoyable look, but were a bit bolder than the average pastel to ensure readability.
 
-- Primary: #ffbcbc This coral pink colour was chosen for the nav bar. 
-- Secondary: #99d8d0 This greenish blue shade was perfect for other elements of the site, and compliments the pink well. 
-- Additional: b7efcd This sea green was used for any other contrasting elements, which also matches the above two colours. 
+- Primary: #ffafb0 This coral pink colour was chosen for the logo. 
+- Secondary: #52057b This purple shade was perfect for other elements of the site, and compliments the pink well. It was used for headings to add a splash of colour.
+- Additional: #686d76 This charcoal grey was perfect for the nav bar headings and body text, as it is slightly less harsh than black but still very readable. 
 
 ### Images:
 The images on the website were chosen specifically to encourage people to get cooking. These show images of different delicious recipes, and people enjoying their time in the kitchen. 
