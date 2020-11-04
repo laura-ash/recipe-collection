@@ -29,7 +29,7 @@ a {
 }
 
 label {
-    color: #fff;
+    color: #000;
     padding-left: 5px;
     text-transform: uppercase;
     margin-top: 2%;
@@ -84,12 +84,12 @@ a:hover {
 
 .form-input {
     border: none;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #686d76;
     padding: 5px;
     margin: 5px;
     width: 100%;
-    background-color: #14274e;
-    color: white;
+    background-color: #fcf1f1;
+    color: #686d76;
     overflow: hidden;
 }
 
@@ -105,12 +105,12 @@ a:hover {
 
 .form-text {
     margin-left: 5px;
-    color: #fff;
+    color: #686d76;
     font-style: italic;
 }
 
 ::placeholder {
-    color: white;
+    color: #686d76;
 }
 
 input:focus {
@@ -124,8 +124,8 @@ input:focus {
 }
 
 .form-card {
-    border: 2px solid #14274e;;
-    background-color: #14274e;
+    border: 2px solid #fcf1f1;;
+    background-color: #fcf1f1;
     border-radius: 2%;
     margin-bottom: 10%;
 }
@@ -141,7 +141,7 @@ input:focus {
 }
 
 .file {
-    color: #fff;
+    color: #686d76;
     margin-top: 1.2rem;
     margin-left: 5px;
 }
@@ -153,7 +153,17 @@ input:focus {
 .button {
     background-color: transparent;
     border-radius: 5%;
-    border: 2px solid #fff;
+    border: 1px solid #686d76;
+    padding: 1%;
+    margin: 2%;    
+    color: #686d76;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: #686d76;
+    border-radius: 5%;
+    border: 1px solid #686d76;
     padding: 1%;
     margin: 2%;    
     color: #fff;
