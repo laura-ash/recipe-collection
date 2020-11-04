@@ -168,6 +168,7 @@ input:focus {
     margin: 2%;    
     color: #fff;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .link-btn {

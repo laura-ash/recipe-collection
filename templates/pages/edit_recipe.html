@@ -5,23 +5,23 @@
 <div class="flex-container form-card container">
     <form method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="recipe-form row" enctype="multipart/form-data">
         <div class="form-container col-sm-12">
-                <label for="recipe_name"></label>
+                <label for="recipe_name">Recipe Title</label>
                 <input type="text" class="form-input" id="recipe_name" value="{{ recipe.name }}" name="recipe_name" placeholder="Recipe Title" required>
             </div>
             <div class="form-container col-sm-12">
-                <label for="author"></label>
+                <label for="author">Author</label>
                 <input type="text" class="form-input" id="author" value="{{ recipe.author }}"name="author" placeholder="Author" required>
             </div>
             <div class="form-container col-sm-6">
-                <label for="serves"></label>
+                <label for="serves">Serves</label>
                 <input type="text" class="form-input" id="serves" value="{{ recipe.serves }}" name="serves" placeholder="Serves*">
             </div>
             <div class="form-container col-sm-6">
-                <label for="date_baked"></label>
+                <label for="date_baked">Date Baked</label>
                 <input type="text" class="form-input" id="date_baked" value="{{ recipe.date_baked }}"name="date_baked" placeholder="Date baked" required>
             </div>
             <div class="form-container col-sm-6 f-space">
-                <label for="category_name"></label>
+                <label for="category_name">Category</label>
                 <select class="form-input" id="category_name" name="category_name" required>
                         <option value="" disabled selected>Choose category</option>
                         {% for category in categories %}
@@ -35,7 +35,7 @@
             </div>
 
             <div class="form-container col-sm-6 f-space">
-                <label for="health_rating"></label>
+                <label for="health_rating">Health Rating</label>
                 <select class="form-input" id="health_rating" name="health_rating" required>
                         <option value="" disabled selected>Choose health rating</option>
                         {% for rating in ratings %}
@@ -48,16 +48,16 @@
                 </select>
             </div>
             <div class="form-container col-sm-12">
-                <label for="notes"></label>
+                <label for="notes">Notes</label>
                 <input type="text" class="form-input" id="notes" value="{{ recipe.notes }}"name="notes" placeholder="Notes" required>
             </div>
             <div class="form-container col-sm-12 f-space">
-                <label for="ingredients"></label>
+                <label for="ingredients">Ingredients</label>
                 <p class="form-text">Ensure there is a comma between each ingredient.</p>
                 <input type="text" class="form-input" id="ingredients" value="{{ ingredients }}" name="ingredients">
             </div>
             <div class="form-container col-sm-12 f-space">
-                <label for="method"></label>
+                <label for="method">Method</label>
                 <p class="form-text">Ensure there is a slash '/' between each step."</p>
                 <input type="text" class="form-input" id="method" value="{{ method }}" name="method" placeholder="Method" required>
             </div>
