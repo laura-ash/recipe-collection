@@ -61,9 +61,6 @@
                 <p class="form-text">Ensure there is a slash '/' between each step."</p>
                 <input type="text" class="form-input" id="method" value="{{ method }}" name="method" placeholder="Method" required>
             </div>
-            <div class="btn col-sm-12 left-btn">
-                <input type="file" class="file" accept="image/*" name="photo_url" id="photo_url" value="{{ recipe.photo_url }}"required>
-            </div>
             <div class="center col-sm-12 center-btn">
                 <button type="submit" class="button">Edit Recipe</button>
                 <a href="{{ url_for('get_recipes')}}" class="button link-btn">Remove</a>
