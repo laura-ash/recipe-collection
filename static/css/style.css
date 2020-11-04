@@ -354,6 +354,10 @@ footer {
     text-transform: uppercase;
 }
 
+#profile {
+    min-height: 60vh;
+}
+
 /* Media queries */
 
 @media only screen and (max-width: 300px) {
