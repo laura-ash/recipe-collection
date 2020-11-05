@@ -15,7 +15,6 @@ upload all of their favourite recipes.
 - Planning✏️
 - Wireframes 🔧
     - Website Layout
-    - Account Creation Flowchart
     - Database Design
 - Features 🎡
     - Features that have been developed
@@ -242,15 +241,14 @@ In order to deploy to Heroku I took the following steps;
 ** API_KEY = [API key]
 ** API_SECRET = [API secret]
 ** CLOUD_NAME = [Cloud name]
-- Go to the Deploy tab and Deploy Branch, ensuring that master branch is selected
 
+* Finally, I selected Deploy Branch within Heroku, using the master branch 
+* The project was successfully deployed to Heroku 
 
-Locally run this project
 
 #### Testing: 
 
-This involved testing the 
-different forms and then comparing the data that ended up in the database. Especially with adding recipes, it was tricky to format them in the way I wanted. This was 
+This involved testing the different forms and then comparing the data that ended up in the database. Especially with adding recipes, it was tricky to format them in the way I wanted. This was 
 especially relevant for the ingredients and method section, as these were arrays which the users would have to add and then they would need to be formatted to appear in 
 a list. 
 
