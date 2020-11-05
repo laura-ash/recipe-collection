@@ -220,6 +220,32 @@ brackets were then added again into the array.
 Solution: It was necessary to add the contents of the ingredients and method arrays, into one string separated by commas. I achieved this by building a variable in the app route 
 and using the python join() method. The new variable was then referenced in the template. 
 
+## Deployment
+
+### Deploying to Heroku
+
+In order to deploy to Heroku I took the following steps; 
+* Created a requirements.txt file to show Heroku the dependcies in my project, this was achieved by typing the following into the terminal "pip3 freeze --local > requirements.txt"
+* The next step is creating a Procfile in my application, which I achieved my typing "echo web: python app.py > Procfile" into the terminal
+* After committing these changes to Github, I went onto the Heroku website and created an account
+* I created a new app in Heroku 
+* Within the deploy tab of this app, I decided to choose GitHub to deploy
+* This made things easier as each time I pushed any new content to GitHub it automatically pushed to Heroku too
+* I connected to the relevant repository in Github
+* Within the Heroku settings I went to Config Vars and added different variables used in my repository, including those needed for Cloudinary
+
+** IP = 0.0.0.0
+** MONGO_DBNAME = [Name of MongoDB] <br>
+** MONGO_URI = mongodb+srv://:@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
+** PORT = 5000
+** SECRET_KEY = [Secret key]
+** API_KEY = [API key]
+** API_SECRET = [API secret]
+** CLOUD_NAME = [Cloud name]
+- Go to the Deploy tab and Deploy Branch, ensuring that master branch is selected
+
+
+Locally run this project
 
 #### Testing: 
 
