@@ -1,36 +1,37 @@
 Welcome to my project! Cooking is something I have always enjoyed, but I always found it hard to keep track of my recipes. This projects aims to serve as a database that users can
 upload all of their favourite recipes.
 
+You can find my live project hosted here; https://recipes-lashmore.herokuapp.com/. 
+
 ## Contents
-- UX 👍
-    - Project Goals
-    - Target Audience Goals
-    - User Stories
-    - User Requirements and Expectations
-- Design Choices 🎨
-    - Fonts
-    - Icons
-    - Colours
-    - Images
-- Planning✏️
-- Wireframes 🔧
-    - Website Layout
-    - Database Design
-- Features 🎡
-    - Features that have been developed
-    - Features that will be implemented in the future
-- Technologies Used 👨‍💻
-- Planning + Testing: ✏️ 🔌
-- Bugs 🐞
-- Deployment 🚀
-	- Deploying to Heroku
-    - Locally run this project
-- Credits 💳
-- Disclaimer
+- [UX] (#ux) 
+    - [Overall Project Goals](#overall-project-goals)
+    - [Target Audience Goals](#target-audience-goals)
+    - [User Stories](#user-stories)
+    - [User Requirements and Expectations](#user-requirements-and-expectations)
+- [Design Choices](#design-choices) 
+    - [Fonts](#fonts)
+    - [Icons](#icons)
+    - [Colours](#colours)
+    - [Images](#images)
+- [Planning](#planning)
+- [Wireframes](#wireframes)
+    - [Website Layout](#website-layout)
+    - [Database Design](#database-design)
+- [Features](#features)
+    - [Features that have been developed] (#features-that-have-been-developed)
+    - [Features that will be implemented in the future] (#features-that-will-be-implemented-in-the-future)
+- [Technologies Used](#technologies-used)
+- [Planning + Testing:](#planning-+-testing)
+- [Bugs](#bugs) 
+- [Deployment](#deployment)
+	- [Deploying to Heroku](#deploying-to-heroku)
+- [Credits] (#credits)
+- [Disclaimer](#disclaimer)
 
-## User Experience: 👍
+## User Experience: 
 
-### Project Goals:
+### Overall Project Goals:
 The goal of this project is to serve as a database that users can go to and search tried and tested recipes. 
 
 ### Target Audience Goals:
@@ -67,7 +68,7 @@ Ellie says:
 - The website loads with acceptable speed.
 - The users can navigate the different pages of the website.-
 
-## Design Choices: 🎨
+## Design Choices: 
 As cooking should be a hobby, the website design was intended to be light, playful and enjoyable. 
 
 ### Fonts:
@@ -90,7 +91,7 @@ bright and enjoyable look, but were a bit bolder than the average pastel to ensu
 The images on the website were chosen specifically to encourage people to get cooking, and are to be uploaded alongside recipes as the users add them. These show images of 
 different delicious recipes, which should inspire the users to cook. 
 
-## Wireframes/Flowcharts: 🔧
+## Wireframes: 
 The wireframes have been built to show on different sized devices.
  
 ### Database Design:
@@ -140,7 +141,7 @@ Categories Collection:
 Category ID|_id|ObjectID
 Category name|category_name|String
 
-## Features: 🎡
+## Features: 
 
 * Users can create an account and log in 
 * Users can add recipes to the database
@@ -172,7 +173,7 @@ form option. I would like to add this option to edit the photo going forward.
 future so that the users can have better access to their accounts in the event of forgotten passwords. 
 
 
-## Technologies Used: 👨‍💻
+## Technologies Used: 
 #### Languages:
 * <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a>
 * <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a>
@@ -192,7 +193,7 @@ future so that the users can have better access to their accounts in the event o
 * <a href="https://flask.palletsprojects.com/en/1.0.x/">Flask</a>
 * <a href="https://jinja.palletsprojects.com/en/2.10.x/">Jinja</a>
 
-## Planning:  + Testing: ✏️ 🔌
+## Planning:  + Testing:
 
 #### Planning: 
 
