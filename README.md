@@ -4,7 +4,7 @@ upload all of their favourite recipes.
 You can find my live project hosted here; https://recipes-lashmore.herokuapp.com/. 
 
 ## Contents
-- [UX] (#ux) 
+- [User Experience](#user-experience) 
     - [Overall Project Goals](#overall-project-goals)
     - [Target Audience Goals](#target-audience-goals)
     - [User Stories](#user-stories)
@@ -19,14 +19,14 @@ You can find my live project hosted here; https://recipes-lashmore.herokuapp.com
     - [Website Layout](#website-layout)
     - [Database Design](#database-design)
 - [Features](#features)
-    - [Features that have been developed] (#features-that-have-been-developed)
-    - [Features that will be implemented in the future] (#features-that-will-be-implemented-in-the-future)
+    - [Features that have been developed](#features-that-have-been-developed)
+    - [Features that will be implemented in the future](#features-that-will-be-implemented-in-the-future)
 - [Technologies Used](#technologies-used)
 - [Planning + Testing:](#planning-+-testing)
 - [Bugs](#bugs) 
 - [Deployment](#deployment)
 	- [Deploying to Heroku](#deploying-to-heroku)
-- [Credits] (#credits)
+- [Credits](#credits)
 - [Disclaimer](#disclaimer)
 
 ## User Experience: 
