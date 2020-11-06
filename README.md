@@ -258,3 +258,7 @@ Testing was also carried out in different browsers and screen sizes to ensure th
 #### Credits: 
 
 Used this tutorial here to get the date picker in the form up and running - https://formden.com/blog/date-picker. 
+
+#### Disclaimer
+
+This website was built for education purposes.
