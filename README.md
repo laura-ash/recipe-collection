@@ -92,7 +92,10 @@ The images on the website were chosen specifically to encourage people to get co
 different delicious recipes, which should inspire the users to cook. 
 
 ## Wireframes: 
-The wireframes have been built to show on different sized devices.
+The wireframes have been built to show on different sized devices. These include desktop, mobile and tablet. 
+* [Link to desktop wireframes here](static/wireframes/desktop-wireframes.png)
+* [Link to tablet wireframes here](static/wireframes/tablet-wireframes.png)
+* [Link to mobile wireframes here](static/wireframes/mobile-wireframes.png)
  
 ### Database Design:
 The project was built around NoSQL features provided by MongoDB. I used these to prepare the following collections.
