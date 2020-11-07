@@ -10,3 +10,15 @@
       };
       date_input.datepicker(options);
     })
+
+/* Confirm if recipe should be deleted */
+
+document.getElementById("remove").onclick = function() {
+   var check = confirm("Are you sure you want to delete this recipe? This action can't be undone!");
+   if (check === true) {
+        window.location.href="{{ url_for('delete_recipe', recipe_id=recipe._id )}}"
+   } else {
+       reload();
+   }
+}
+
