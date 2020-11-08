@@ -92,7 +92,7 @@ The images on the website were chosen specifically to encourage people to get co
 different delicious recipes, which should inspire the users to cook. 
 
 ## Wireframes: 
-The wireframes have been built to show on different sized devices. These include desktop, mobile and tablet. 
+The wireframes have been built to show on different sized devices. These include desktop, tablet and mobile. 
 * [Link to desktop wireframes here](static/wireframes/desktop-wireframes.png)
 * [Link to tablet wireframes here](static/wireframes/tablet-wireframes.png)
 * [Link to mobile wireframes here](static/wireframes/mobile-wireframes.png)
