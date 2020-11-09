@@ -148,8 +148,6 @@ def add_recipe():
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):     
     if request.method == "POST":
-        photo = request.files['photo_url']
-        photo_upload = cloudinary.uploader.upload(photo)
         submit = {
             "name": request.form.get("recipe_name"),
             "author": request.form.get("author"),
