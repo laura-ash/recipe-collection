@@ -223,6 +223,14 @@ brackets were then added again into the array.
 Solution: It was necessary to add the contents of the ingredients and method arrays, into one string separated by commas. I achieved this by building a variable in the app route 
 and using the python join() method. The new variable was then referenced in the template. 
 
+Problem: As users are able to upload their own photos, there is no way to ensure that they have a uniform size. Initially when they were added to the database, they were showing
+as different sizes which then caused all of the recipes on the main page to be out of line. This did not look very well, so I knew I needed to come up with a way of making these 
+all a uniform size. 
+Solution: The issue here was that the recipe card had an outline which I liked the look of, and it was hoped that I could keep this border too. This meant that the image had to 
+line up exactly with the border too. I played around with a few designs, but the final decision was to write media queries to set a specific height and width in pixels for each 
+image size, which meant it would expand to fit in the border box. There were a lot of media queries to be written, so the solution was not ideal but I hope to implement a better way 
+around this issue in the future. 
+
 ## Deployment
 
 ### Deploying to Heroku
