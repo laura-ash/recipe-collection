@@ -5,66 +5,66 @@
 <div class="flex-container form-card container">
     <form method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="recipe-form row" enctype="multipart/form-data">
         <div class="form-container col-sm-12">
-                <label for="recipe_name">Recipe Title</label>
-                <input type="text" class="form-input" id="recipe_name" value="{{ recipe.name }}" name="recipe_name" placeholder="Recipe Title" required>
-            </div>
-            <div class="form-container col-sm-12">
-                <label for="author">Author</label>
-                <input type="text" class="form-input" id="author" value="{{ recipe.author }}"name="author" placeholder="Author" required>
-            </div>
-            <div class="form-container col-sm-6">
-                <label for="serves">Serves</label>
-                <input type="text" class="form-input" id="serves" value="{{ recipe.serves }}" name="serves" placeholder="Serves*">
-            </div>
-            <div class="form-container col-sm-6">
-                <label for="date_baked">Date Baked</label>
-                <input type="text" class="form-input" id="date_baked" value="{{ recipe.date_baked }}"name="date_baked" placeholder="Date baked" required>
-            </div>
-            <div class="form-container col-sm-6 f-space">
-                <label for="category_name">Category</label>
-                <select class="form-input" id="category_name" name="category_name" required>
-                        <option value="" disabled selected>Choose category</option>
-                        {% for category in categories %}
-                            {% if category.category_name == recipe.category_name %}
-                                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
-                            {% else %}
-                                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
-                            {% endif %}
-                        {% endfor %}
-                </select>
-            </div>
+            <label for="recipe_name">Recipe Title</label>
+            <input type="text" class="form-input" id="recipe_name" value="{{ recipe.name }}" name="recipe_name" placeholder="Recipe Title" required>
+        </div>
+        <div class="form-container col-sm-12">
+            <label for="author">Author</label>
+            <input type="text" class="form-input" id="author" value="{{ recipe.author }}" name="author" placeholder="Author" required>
+        </div>
+        <div class="form-container col-sm-6">
+            <label for="serves">Serves</label>
+            <input type="text" class="form-input" id="serves" value="{{ recipe.serves }}" name="serves" placeholder="Serves*">
+        </div>
+        <div class="form-container col-sm-6">
+            <label for="date_baked">Date Baked</label>
+            <input type="text" class="form-input" id="date_baked" value="{{ recipe.date_baked }}" name="date_baked" placeholder="Date baked" required>
+        </div>
+        <div class="form-container col-sm-6 f-space">
+            <label for="category_name">Category</label>
+            <select class="form-input" id="category_name" name="category_name" required>
+                <option value="" disabled selected>Choose category</option>
+                {% for category in categories %}
+                {% if category.category_name == recipe.category_name %}
+                <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                {% else %}
+                <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </div>
 
-            <div class="form-container col-sm-6 f-space">
-                <label for="health_rating">Health Rating</label>
-                <select class="form-input" id="health_rating" name="health_rating" required>
-                        <option value="" disabled selected>Choose health rating</option>
-                        {% for rating in ratings %}
-                            {% if rating.health_rating == recipe.health_rating %}
-                                <option value="{{ rating.health_rating }}" selected>{{ rating.health_rating }}</option>
-                            {% else %}
-                                <option value="{{ rating.health_rating }}">{{ rating.health_rating }}</option>
-                            {% endif %}
-                        {% endfor %}
-                </select>
-            </div>
-            <div class="form-container col-sm-12">
-                <label for="notes">Notes</label>
-                <input type="text" class="form-input" id="notes" value="{{ recipe.notes }}"name="notes" placeholder="Notes" required>
-            </div>
-            <div class="form-container col-sm-12 f-space">
-                <label for="ingredients">Ingredients</label>
-                <p class="form-text">Ensure there is a comma between each ingredient.</p>
-                <input type="text" class="form-input" id="ingredients" value="{{ ingredients }}" name="ingredients">
-            </div>
-            <div class="form-container col-sm-12 f-space">
-                <label for="method">Method</label>
-                <p class="form-text">Ensure there is a slash '/' between each step."</p>
-                <input type="text" class="form-input" id="method" value="{{ method }}" name="method" placeholder="Method" required>
-            </div>
-            <div class="center col-sm-12 center-btn">
-                <button type="submit" class="button">Edit Recipe</button>
-                <a href="{{ url_for('get_recipes')}}" class="button link-btn">Remove</a>
-            </div>
+        <div class="form-container col-sm-6 f-space">
+            <label for="health_rating">Health Rating</label>
+            <select class="form-input" id="health_rating" name="health_rating" required>
+                <option value="" disabled selected>Choose health rating</option>
+                {% for rating in ratings %}
+                {% if rating.health_rating == recipe.health_rating %}
+                <option value="{{ rating.health_rating }}" selected>{{ rating.health_rating }}</option>
+                {% else %}
+                <option value="{{ rating.health_rating }}">{{ rating.health_rating }}</option>
+                {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-container col-sm-12">
+            <label for="notes">Notes</label>
+            <input type="text" class="form-input" id="notes" value="{{ recipe.notes }}" name="notes" placeholder="Notes" required>
+        </div>
+        <div class="form-container col-sm-12 f-space">
+            <label for="ingredients">Ingredients</label>
+            <p class="form-text">Ensure there is a comma between each ingredient.</p>
+            <input type="text" class="form-input" id="ingredients" value="{{ ingredients }}" name="ingredients">
+        </div>
+        <div class="form-container col-sm-12 f-space">
+            <label for="method">Method</label>
+            <p class="form-text">Ensure there is a slash '/' between each step."</p>
+            <input type="text" class="form-input" id="method" value="{{ method }}" name="method" placeholder="Method" required>
+        </div>
+        <div class="center col-sm-12 center-btn">
+            <button type="submit" class="button">Edit Recipe</button>
+            <a href="{{ url_for('get_recipes')}}" class="button link-btn">Remove</a>
+        </div>
     </form>
 </div>
 
