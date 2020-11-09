@@ -162,8 +162,9 @@ for that recipe prepopulated (except for the image, see below for more on this).
 considered to use JavaScript here for dynamic form fields, where the user could add an extra input for each ingredient and step in the method. Although this would have 
 looked quite nice, the main issue with the functionality is that it would take much longer for the user to upload the recipe as they would have to copy and paste or add 
 each ingredient and step individually. 
-* In order to remove a recipe, the user can just select remove on the recipe card or page which will remove the recipe from Mongo, and thus remove it from the database 
-and the website.
+* In order to remove a recipe, the user can just select remove on the recipe card or individual recipe page which will remove the recipe from Mongo, and thus remove it from 
+the database and the website. The user will first be prommpted with a modal to ensure they want to delete the recipe, which is a defensive design to protect from 
+accidental deletion. 
 * On the main home page for the recipes, the user can see a list of all recipes uploaded by themselves and also other users. 
 
 
