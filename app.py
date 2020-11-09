@@ -158,8 +158,10 @@ def edit_recipe(recipe_id):
             "notes": request.form.get("notes"),
             "ingredients": request.form.get("ingredients").split('/'),
             "method": request.form.get("method").split('/'),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "photo_url": request.form.get("photo_url"),
         }
+        print(request.form.get("photo_url")) 
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)},submit)
         flash("Recipe successfully updated")
         return redirect(url_for("get_recipes"))
@@ -188,6 +190,6 @@ def recipe_page(recipe):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
         port=int(os.environ.get("PORT")),
-        debug=False)
+        debug=True)
 
 

@@ -33,7 +33,6 @@
                 {% endfor %}
             </select>
         </div>
-
         <div class="form-container col-sm-6 f-space">
             <label for="health_rating">Health Rating</label>
             <select class="form-input" id="health_rating" name="health_rating" required>
@@ -60,6 +59,9 @@
             <label for="method">Method</label>
             <p class="form-text">Ensure there is a slash '/' between each step."</p>
             <input type="text" class="form-input" id="method" value="{{ method }}" name="method" placeholder="Method" required>
+        </div>
+         <div class="form-container col-sm-6">
+            <input type="hidden" class="form-input" value="{{ recipe.photo_url }}" name="photo_url" placeholder="Photo URL" required>
         </div>
         <div class="center col-sm-12 center-btn">
             <button type="submit" class="button">Edit Recipe</button>
